@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0-dtd"
+>
+<hibernate-mapping>
+	<!-- 将Student实例持久化到数据表student -->
+	<class name="hibernate.entity.Student" table="student">
+		<!-- 将持久化类的标识属性id映射到数据表主键列id -->
+		<id name="id" type="java.lang.Integer" column="id">
+			<!-- 设置主键生成策略 -->
+			<generator class="increment" />
+		</id>
+		<!-- 将持久化类的普通属性持久化到对应的数据表字段 -->
+		<property name="name" type="java.lang.String" column="name"></property>
+		<property name="sex" type="java.lang.String" column="sex"></property>
+		<property name="major" type="java.lang.String" column="major"></property>
+		<property name="dept" type="java.lang.String" column="dept"></property>
+	</class>
+</hibernate-mapping>
+	
